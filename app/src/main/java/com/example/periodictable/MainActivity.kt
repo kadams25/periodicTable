@@ -3,13 +3,25 @@ package com.example.periodictable
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
+import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.periodictable.databinding.ActivityMainBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
+import org.json.JSONArray
+import java.io.BufferedReader
+import java.net.HttpURLConnection
+import java.net.URL
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+
+    private var searchJob: Job? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,5 +57,32 @@ class MainActivity : AppCompatActivity() {
             }
         }
         return available
+    }
+
+    private fun findElement(element: String) {
+
+        searchJob = CoroutineScope(Dispatchers.IO).launch {
+
+            val builder = Uri.Builder()
+                .scheme("https")
+                .authority("periodic-table-elements-info.herokuapp.com")
+                .path("/elements")
+
+            val link = builder.build().toString()
+            val url = URL(link)
+            val connection: HttpURLConnection = url.openConnection() as HttpURLConnection
+
+            val jsonStr: String
+
+            try {
+                jsonStr = connection.getInputStream().bufferedReader()
+                    .use(BufferedReader::readText)
+            } finally {
+                connection.disconnect()
+            }
+
+            val json = JSONArray(jsonStr)
+
+        }
     }
 }
