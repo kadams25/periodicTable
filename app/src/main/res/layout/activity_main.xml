@@ -1,18 +1,2222 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:id="@+id/root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#D4D4D4"
+    android:scrollbars="none"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <HorizontalScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="64dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp">
+
+                <Button
+                    android:id="@+id/hydrogen_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:backgroundTint="#E57373"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/h"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/helium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:backgroundTint="#E57373"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/he"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp">
+
+                <Button
+                    android:id="@+id/lithium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#E57373"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/li"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp"
+                    tools:ignore="TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/beryllium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#E57373"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/be"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/boron_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/b"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/carbon_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/c"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/nitrogen_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/n"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/oxygen_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/o"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/fluorine_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/f"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/neon_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/ne"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp">
+
+                <Button
+                    android:id="@+id/sodium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#E57373"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/na"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/magnesium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#E57373"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/mg"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/aluminum_button"
+                    style="?attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/al"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/silicon_button"
+                    style="?attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/si"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/phosphorus_button"
+                    style="?attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/p"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/sulfur_button"
+                    style="?attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/s"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/chlorine_button"
+                    style="?attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/cl"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/argon_button"
+                    style="?attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/ar"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp">
+
+                <Button
+                    android:id="@+id/potassium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#E57373"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/k"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/calcium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#E57373"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/ca"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/scandium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/sc"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/titanium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/ti"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/vanadium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/v"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/chromium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/cr"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/manganese_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/mn"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/iron_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/fe"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/cobalt_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/co"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/nickel_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/ni"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/copper_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/cu"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/zinc_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/zn"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/galium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/ga"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/germaniuim_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/ge"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/arsenic_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/as"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/selenium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/se"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/bromine_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/br"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/krypton_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/kr"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp">
+
+                <Button
+                    android:id="@+id/rubidium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#E57373"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/rb"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/strontium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#E57373"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/sr"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp"
+                    tools:ignore="TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/yttrium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/y"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/zirconium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/zr"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/niobium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/nb"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/molybdenum_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/mo"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/technetium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/tc"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/ruthenium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/ru"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/rhodium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/rh"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/palladium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/pd"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/silver_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/ag"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/cadmium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/cd"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/indium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/in"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/tin_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/sn"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/antimony_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/sb"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/tellurium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/te"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/iodine_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/i"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/xenon_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/xe"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp">
+
+                <Button
+                    android:id="@+id/caesium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#E57373"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/cs"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/barium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#E57373"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/ba"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp"
+                    tools:ignore="TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/lanthanum_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/la"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/hafnium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/hf"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/tantalum_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/ta"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/tungsten_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/w"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/rhenium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/re"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/osmium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/os"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/iridium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/ir"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/platinum_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/pt"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/gold_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/au"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/mercury_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/hg"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/thallium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/tl"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/lead_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/pb"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/bismuth_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/bi"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/polonium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/po"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/astatine_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/at"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/radon_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/rn"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp">
+
+                <Button
+                    android:id="@+id/francium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#E57373"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/fr"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/radium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#E57373"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/ra"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp"
+                    tools:ignore="TextContrastCheck" />
+
+                <Button
+                    android:id="@+id/actinium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/ac"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/rutherfordium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/rf"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/dubnium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/db"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/seaborgium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/sg"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/bohrium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/bh"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/hassium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/hs"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/meitnerium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/mt"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/darmstadium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/ds"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/roentgenium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/rg"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/copernicium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/cn"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/nihonium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/nh"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/flerovium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/fl"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/moscovium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/mc"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/livermorium_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/lv"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/tennessine_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/ts"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/oganesson_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#FFD54F"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/og"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/cerium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/ce"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/praseodymium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/pr"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/neodymium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/nd"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/promethium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/pm"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="19sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/samarium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/sm"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="19sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/europium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/eu"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/gadolinium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/gd"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/terbium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/tb"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/dysprosium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/dy"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/holmium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/ho"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/erbium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/er"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/thulium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/tm"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/ytterbium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/yb"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/lutetium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/lu"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/thorium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/th"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/protactinium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/pa"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/uranium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/u"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/neptunium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/np"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/plutonium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/pu"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/americium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/am"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="19sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/curium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/cm"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="19sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/berkelium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/bk"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/californium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/cf"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/einsteinium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/es"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/fermium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/fm"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/mendelevium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/md"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/nobelium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#81C784"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/no"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+
+                <Button
+                    android:id="@+id/lawrencium_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginEnd="1dp"
+                    android:backgroundTint="#4FC3F7"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/lr"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    app:cornerRadius="0dp"
+                    app:rippleColor="#FFFFFF"
+                    app:strokeWidth="0dp" />
+            </TableRow>
+        </TableLayout>
+    </HorizontalScrollView>
+</ScrollView>
