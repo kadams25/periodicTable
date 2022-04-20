@@ -1,6 +1,24 @@
 <resources>
     <string name="app_name">periodicTable</string>
 
+    <string name="atomicNum">Atomic number: %s</string>
+    <string name="symbol">%s</string>
+    <string name="element">%s</string>
+    <string name="atomicMass">Atomic mass: %s</string>
+    <string name="electronicConfig">Electronic Configuration: %s</string>
+    <string name="atomicRadius">Atomic radius: %s</string>
+    <string name="standardState">Standard State: %s</string>
+    <string name="bondingType">Bonding Type: %s</string>
+    <string name="meltingPoint">Melting Point: %s</string>
+    <string name="boilingPoint">Boiling Point: %s</string>
+    <string name="density">Density: %s</string>
+    <string name="click_here_for_more_information">Click here for more information</string>
+    <string name="groupBlock">Group block: %s</string>
+    <string name="yearDiscovered">Year discovered: %s</string>
+    <string name="block">Block: %s</string>
+    <string name="period">Period: %s</string>
+    <string name="group">Group: %s</string>
+
     <string name="li">Li</string>
     <string name="ar">Ar</string>
     <string name="b">B</string>
