@@ -114,7 +114,6 @@ class MainActivity : AppCompatActivity() {
             for (elementIndex in 0 until json.length()) {
                 val elementObject = json.getJSONObject(elementIndex)
                 val symbol = elementObject.getString("symbol").toString()
-
             }
         }
     }
