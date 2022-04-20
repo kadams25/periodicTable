@@ -117,6 +117,9 @@ class MainActivity : AppCompatActivity() {
                 val elementObject = json.getJSONObject(elementIndex)
                 val symbol = elementObject.getString("symbol").toString()
 
+                if (symbol == element) {
+                    getElementInfo(elementObject)
+                }
             }
         }
     }
@@ -140,10 +143,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         val elementInfo = Element(
-            elementData[0], elementData[1], elementData[2], elementData[3],
-            elementData[4], elementData[5], elementData[6], elementData[7], elementData[8],
-            elementData[9], elementData[10], elementData[11], elementData[12], elementData[13],
-            elementData[14], elementData[15]
+            elementData[0], elementData[1], elementData[2], elementData[3], elementData[4],
+            elementData[5], elementData[6], elementData[7], elementData[8], elementData[9],
+            elementData[10], elementData[11], elementData[12], elementData[13], elementData[14],
+            elementData[15]
         )
+        val intent = Intent(this, ElementObjectActivity::class.java)
+
+        intent.putExtra(getString(R.string.intent_data_key), elementInfo)
+        startActivity(intent)
     }
 }

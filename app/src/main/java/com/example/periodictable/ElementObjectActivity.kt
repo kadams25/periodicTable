@@ -10,5 +10,10 @@ class ElementObjectActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityElementObjectBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val intent = getIntent()
+        val data: Element = intent.getSerializableExtra(
+            getString(R.string.intent_data_key)
+        ) as Element
+
     }
 }
