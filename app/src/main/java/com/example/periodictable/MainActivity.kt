@@ -7,6 +7,8 @@ import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.ViewGroup
+import android.widget.Button
 import android.widget.Toast
 import com.example.periodictable.databinding.ActivityMainBinding
 import kotlinx.coroutines.CoroutineScope
@@ -22,12 +24,38 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     private var searchJob: Job? = null
+    private val button = ArrayList<Button>()
+
+    private fun loopThrough(parent: ViewGroup) {
+        for (i in 0 until parent.childCount) {
+            val child = parent.getChildAt(i)
+
+            if (child is Button) button.add(child)
+            else if (child is ViewGroup) loopThrough(child)
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        loopThrough(findViewById(R.id.root))
 
+        for (index in button.indices) {
+            button[index].setOnClickListener {
+                val elementSymbol = button[index].getText().toString()
+                if (isNetworkAvailable()) {
+                    if (searchJob?.isActive != true) {
+                        findElement(elementSymbol)
+                    } else {
+                        Toast.makeText(
+                            applicationContext,
+                            "No connection to network", Toast.LENGTH_LONG
+                        ).show()
+                    }
+                }
+            }
+        }
     }
 
     private fun isNetworkAvailable(): Boolean {
@@ -83,6 +111,11 @@ class MainActivity : AppCompatActivity() {
 
             val json = JSONArray(jsonStr)
 
+            for (elementIndex in 0 until json.length()) {
+                val elementObject = json.getJSONObject(elementIndex)
+                val symbol = elementObject.getString("symbol").toString()
+
+            }
         }
     }
 }
