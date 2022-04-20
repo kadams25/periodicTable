@@ -1,6 +1,7 @@
 package com.example.periodictable
 
 import android.content.Context
+import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.net.Uri
@@ -16,6 +17,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import org.json.JSONArray
+import org.json.JSONObject
 import java.io.BufferedReader
 import java.net.HttpURLConnection
 import java.net.URL
@@ -114,7 +116,34 @@ class MainActivity : AppCompatActivity() {
             for (elementIndex in 0 until json.length()) {
                 val elementObject = json.getJSONObject(elementIndex)
                 val symbol = elementObject.getString("symbol").toString()
+
             }
         }
+    }
+
+    private fun getElementInfo(element: JSONObject) {
+        val elementData = mutableListOf(
+            "atomicNumber", "symbol", "name", "period", "group", "groupBlock", "block",
+            "yearDiscovered", "standardState", "bondingType", "atomicMass",
+            "electronicConfiguration", "atomicRadius", "meltingPoint", "boilingPoint", "density"
+        )
+
+        for (index in 0 until elementData.size) {
+            elementData[index] = element.getString(elementData[index])
+            if (index == 12) {
+                elementData[index] += " pm"
+            } else if (index == 13 || index == 14) {
+                elementData[index] += " K"
+            } else if (index == 15) {
+                elementData[index] += " g/cm^3"
+            }
+        }
+
+        val elementInfo = Element(
+            elementData[0], elementData[1], elementData[2], elementData[3],
+            elementData[4], elementData[5], elementData[6], elementData[7], elementData[8],
+            elementData[9], elementData[10], elementData[11], elementData[12], elementData[13],
+            elementData[14], elementData[15]
+        )
     }
 }
