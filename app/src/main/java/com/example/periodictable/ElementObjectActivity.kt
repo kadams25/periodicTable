@@ -1,5 +1,7 @@
 package com.example.periodictable
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
@@ -54,6 +56,13 @@ class ElementObjectActivity : AppCompatActivity() {
                         })
                 )
             }
+        }
+
+        val wikiUrl = "https://en.wikipedia.org/wiki/${data.name}"
+        binding.wikiButton.setOnClickListener {
+            val openURL = Intent(Intent.ACTION_VIEW)
+            openURL.data = Uri.parse(wikiUrl)
+            startActivity(openURL)
         }
     }
 }
