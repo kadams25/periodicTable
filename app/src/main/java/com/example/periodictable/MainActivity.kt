@@ -1,6 +1,7 @@
 package com.example.periodictable
 
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
@@ -8,15 +9,16 @@ import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.InputType
 import android.view.Menu
+import android.view.MenuItem
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.example.periodictable.databinding.ActivityMainBinding
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -28,6 +30,8 @@ class MainActivity : AppCompatActivity() {
 
     private var searchJob: Job? = null
     private val button = ArrayList<Button>()
+    private var elementSymbol = ""
+    private var elementName = ""
 
     private fun loopThrough(parent: ViewGroup) {
         for (i in 0 until parent.childCount) {
@@ -46,10 +50,10 @@ class MainActivity : AppCompatActivity() {
 
         for (index in button.indices) {
             button[index].setOnClickListener {
-                val elementSymbol = button[index].getText().toString()
+                elementSymbol = button[index].getText().toString()
                 if (isNetworkAvailable()) {
                     if (searchJob?.isActive != true) {
-                        findElement(elementSymbol)
+                        findElement(elementSymbol, elementName)
                     } else {
                         Toast.makeText(
                             applicationContext,
@@ -64,6 +68,38 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
         return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        if (item.itemId == R.id.menu_search) {
+            val builder = AlertDialog.Builder(
+                binding.root.context
+            )
+
+            val input = EditText(this)
+            input.setHint("eg. Hydrogen")
+            input.inputType = InputType.TYPE_CLASS_TEXT
+
+
+            val listener = DialogInterface.OnClickListener { dialog, which ->
+                if (which == DialogInterface.BUTTON_POSITIVE) {
+                    elementName = input.text.toString().uppercase()
+                    findElement(elementSymbol, elementName)
+
+                } else {
+                    dialog.cancel()
+                }
+            }
+            builder
+                .setTitle("Search")
+                .setMessage("Search for element by name.")
+                .setView(input)
+                .setPositiveButton("Ok", listener)
+                .setNegativeButton("Cancel", listener)
+                .show()
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun isNetworkAvailable(): Boolean {
@@ -95,7 +131,7 @@ class MainActivity : AppCompatActivity() {
         return available
     }
 
-    private fun findElement(element: String) {
+    private fun findElement(eSymbol: String, eName: String) {
 
         searchJob = CoroutineScope(Dispatchers.IO).launch {
 
@@ -119,14 +155,31 @@ class MainActivity : AppCompatActivity() {
 
             val json = JSONArray(jsonStr)
 
+            var counter = 0
             for (elementIndex in 0 until json.length()) {
                 val elementObject = json.getJSONObject(elementIndex)
                 val symbol = elementObject.getString("symbol").toString()
+                val name = elementObject.getString("name").toString().uppercase()
 
-                if (symbol == element) {
+                if (symbol == eSymbol || name == eName) {
                     getElementInfo(elementObject)
                 }
+
+                if (name != eName) {
+                    counter++
+                }
+
+                if (counter == json.length() && eSymbol == "") {
+                    withContext(Dispatchers.Main) {
+                        Toast.makeText(
+                            applicationContext, "Not an element", Toast.LENGTH_LONG
+                        ).show()
+                    }
+                }
+
             }
+            elementName = ""
+            elementSymbol = ""
         }
     }
 
