@@ -1,10 +1,7 @@
 package com.example.periodictable
 
 import android.content.Context
-import android.content.DialogInterface
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.net.Uri
@@ -14,7 +11,6 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.InputType
 import android.text.TextWatcher
-import android.util.Log
 import android.view.*
 import android.widget.Button
 import android.widget.EditText

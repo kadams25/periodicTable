@@ -20,6 +20,10 @@
     <string name="period">Period: %s</string>
     <string name="group">Group: %s</string>
 
+    <string name="title">Title: %s</string>
+    <string name="creator">Creator: <a href="https://images-of-elements.com/">Jürgen Kummer</a></string>
+    <string name="license">License: <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a></string>
+
     <string name="li">Li</string>
     <string name="ar">Ar</string>
     <string name="b">B</string>
@@ -139,4 +143,6 @@
     <string name="fm">Fm</string>
     <string name="pb">Pb</string>
     <string name="search">Search</string>
+    <string name="source">Source</string>
+    <string name="image_attribution">Image Attribution</string>
 </resources>

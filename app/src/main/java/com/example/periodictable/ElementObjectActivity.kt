@@ -10,6 +10,8 @@ import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.TextView
 import android.widget.Toast
 import com.example.periodictable.databinding.ActivityElementObjectBinding
@@ -21,6 +23,8 @@ import java.util.*
 class ElementObjectActivity : AppCompatActivity() {
     private lateinit var binding: ActivityElementObjectBinding
     private var imageJob: Job? = null
+    private lateinit var elementInfo: Element
+    private var imageCheck = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +35,8 @@ class ElementObjectActivity : AppCompatActivity() {
         val data: Element = intent.getSerializableExtra(
             getString(R.string.intent_data_key)
         ) as Element
+
+        elementInfo = data
 
         val imageUrl = "https://images-of-elements.com/${data.name.lowercase()}.jpg"
         if (isNetworkAvailable()) {
@@ -89,7 +95,6 @@ class ElementObjectActivity : AppCompatActivity() {
             openURL.data = Uri.parse(wikiUrl)
             startActivity(openURL)
         }
-
     }
 
     private fun getImage(link: String) {
@@ -113,9 +118,32 @@ class ElementObjectActivity : AppCompatActivity() {
                     binding.elementImageView.setImageBitmap(bitmap)
                 } else {
                     binding.elementImageView.setImageResource(R.drawable.ic_broken_image)
+                    imageCheck = false
                 }
             }
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.element_object_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onPrepareOptionsMenu(menu: Menu?): Boolean {
+        if (!imageCheck) {
+            menu?.findItem(R.id.menu_acknknowledgment)?.setEnabled(false)
+        }
+        return super.onPrepareOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        if (item.itemId == R.id.menu_acknknowledgment) {
+            val intent = Intent(this, AcknowledgmentActivity::class.java)
+            intent.putExtra(getString(R.string.intent_data_key), elementInfo)
+            startActivity(intent)
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun isNetworkAvailable(): Boolean {

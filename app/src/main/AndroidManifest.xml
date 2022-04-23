@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PeriodicTable">
         <activity
+            android:name=".AcknowledgmentActivity"
+            android:exported="false" />
+        <activity
             android:name=".ElementObjectActivity"
             android:exported="false" />
         <activity
