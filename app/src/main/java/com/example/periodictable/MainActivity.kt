@@ -9,10 +9,10 @@ import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
 import android.text.InputType
-import android.view.Menu
-import android.view.MenuItem
-import android.view.ViewGroup
+import android.text.TextWatcher
+import android.view.*
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -73,31 +73,46 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         if (item.itemId == R.id.menu_search) {
+
+            val input = EditText(this)
+            input.setHint("e.g., Hydrogen")
+            input.inputType = InputType.TYPE_CLASS_TEXT
+
             val builder = AlertDialog.Builder(
                 binding.root.context
             )
-
-            val input = EditText(this)
-            input.setHint("eg. Hydrogen")
-            input.inputType = InputType.TYPE_CLASS_TEXT
-
-
-            val listener = DialogInterface.OnClickListener { dialog, which ->
-                if (which == DialogInterface.BUTTON_POSITIVE) {
-                    elementName = input.text.toString().uppercase()
-                    findElement(elementSymbol, elementName)
-
-                } else {
-                    dialog.cancel()
-                }
-            }
-            builder
                 .setTitle("Search")
                 .setMessage("Search for element by name.")
                 .setView(input)
-                .setPositiveButton("Ok", listener)
-                .setNegativeButton("Cancel", listener)
-                .show()
+                .setPositiveButton("Ok", null)
+                .setNegativeButton("Cancel") { dialog, which ->
+                    dialog.cancel()
+                }
+
+            val dialog = builder.create()
+            dialog.setOnShowListener {
+
+                val okButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE)
+                okButton.isEnabled = false
+
+                input.addTextChangedListener(object: TextWatcher {
+                    override fun onTextChanged(s:CharSequence, start:Int, before:Int, count:Int) {
+                        okButton.isEnabled = s.toString().trim{ it <= ' ' }.isNotEmpty()
+                    }
+                    override fun beforeTextChanged(s:CharSequence, start:Int, count:Int,
+                                                   after:Int) {
+                    }
+                    override fun afterTextChanged(s: Editable) {
+                    }
+                })
+
+                okButton.setOnClickListener {
+                    elementName = input.getText().toString().uppercase()
+                    findElement(elementSymbol, elementName)
+                    dialog.dismiss()
+                }
+            }
+            dialog.show()
         }
         return super.onOptionsItemSelected(item)
     }
