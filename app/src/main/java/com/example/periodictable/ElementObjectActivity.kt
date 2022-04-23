@@ -1,23 +1,49 @@
 package com.example.periodictable
 
+import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import android.net.Uri
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import android.widget.Toast
 import com.example.periodictable.databinding.ActivityElementObjectBinding
+import kotlinx.coroutines.*
+import java.net.HttpURLConnection
+import java.net.URL
 import java.util.*
 
 class ElementObjectActivity : AppCompatActivity() {
     private lateinit var binding: ActivityElementObjectBinding
+    private var imageJob: Job? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityElementObjectBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         val intent = getIntent()
         val data: Element = intent.getSerializableExtra(
             getString(R.string.intent_data_key)
         ) as Element
+
+        val imageUrl = "https://images-of-elements.com/${data.name.lowercase()}.jpg"
+        if (isNetworkAvailable()) {
+            if (imageJob?.isActive != true) {
+                getImage(imageUrl)
+            } else {
+                Toast.makeText(
+                    applicationContext,
+                    "No connection to network", Toast.LENGTH_LONG
+                ).show()
+            }
+        }
+        getImage(imageUrl)
 
         val widgets = listOf<TextView>(
             binding.atomicNumberTextView, binding.symbolTextView, binding.nameTextView,
@@ -57,12 +83,67 @@ class ElementObjectActivity : AppCompatActivity() {
                 )
             }
         }
-
         val wikiUrl = "https://en.wikipedia.org/wiki/${data.name}"
         binding.wikiButton.setOnClickListener {
             val openURL = Intent(Intent.ACTION_VIEW)
             openURL.data = Uri.parse(wikiUrl)
             startActivity(openURL)
         }
+
+    }
+
+    private fun getImage(link: String) {
+        imageJob = CoroutineScope(Dispatchers.IO).launch {
+
+            val url = URL(link)
+            val connection: HttpURLConnection = url.openConnection() as HttpURLConnection
+
+            var bitmap: Bitmap? = null
+            try {
+                connection.getInputStream().use { stream ->
+                    bitmap = BitmapFactory.decodeStream(stream)
+                }
+            } catch (e: java.io.FileNotFoundException) {
+            } finally {
+                connection.disconnect()
+            }
+
+            withContext(Dispatchers.Main) {
+                if (bitmap != null) {
+                    binding.elementImageView.setImageBitmap(bitmap)
+                } else {
+                    binding.elementImageView.setImageResource(R.drawable.ic_broken_image)
+                }
+            }
+        }
+    }
+
+    private fun isNetworkAvailable(): Boolean {
+        var available = false
+        val cm = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+
+        cm?.run {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                cm.getNetworkCapabilities(cm.activeNetwork)?.run {
+                    if (hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)
+                        || hasTransport(NetworkCapabilities.TRANSPORT_WIFI)
+                        || hasTransport(NetworkCapabilities.TRANSPORT_VPN)
+                    ) {
+                        available = true
+                    }
+                }
+
+            } else {
+                cm.getActiveNetworkInfo()?.run {
+                    if (type == ConnectivityManager.TYPE_MOBILE
+                        || type == ConnectivityManager.TYPE_WIFI
+                        || type == ConnectivityManager.TYPE_VPN
+                    ) {
+                        available = true
+                    }
+                }
+            }
+        }
+        return available
     }
 }

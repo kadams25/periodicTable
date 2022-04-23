@@ -3,6 +3,8 @@ package com.example.periodictable
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.net.Uri
@@ -12,6 +14,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.InputType
 import android.text.TextWatcher
+import android.util.Log
 import android.view.*
 import android.widget.Button
 import android.widget.EditText
@@ -117,35 +120,6 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    private fun isNetworkAvailable(): Boolean {
-        var available = false
-        val cm = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-
-        cm?.run {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                cm.getNetworkCapabilities(cm.activeNetwork)?.run {
-                    if (hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)
-                        || hasTransport(NetworkCapabilities.TRANSPORT_WIFI)
-                        || hasTransport(NetworkCapabilities.TRANSPORT_VPN)
-                    ) {
-                        available = true
-                    }
-                }
-
-            } else {
-                cm.getActiveNetworkInfo()?.run {
-                    if (type == ConnectivityManager.TYPE_MOBILE
-                        || type == ConnectivityManager.TYPE_WIFI
-                        || type == ConnectivityManager.TYPE_VPN
-                    ) {
-                        available = true
-                    }
-                }
-            }
-        }
-        return available
-    }
-
     private fun findElement(eSymbol: String, eName: String) {
 
         searchJob = CoroutineScope(Dispatchers.IO).launch {
@@ -226,5 +200,34 @@ class MainActivity : AppCompatActivity() {
 
         intent.putExtra(getString(R.string.intent_data_key), elementInfo)
         startActivity(intent)
+    }
+
+    private fun isNetworkAvailable(): Boolean {
+        var available = false
+        val cm = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+
+        cm?.run {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                cm.getNetworkCapabilities(cm.activeNetwork)?.run {
+                    if (hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)
+                        || hasTransport(NetworkCapabilities.TRANSPORT_WIFI)
+                        || hasTransport(NetworkCapabilities.TRANSPORT_VPN)
+                    ) {
+                        available = true
+                    }
+                }
+
+            } else {
+                cm.getActiveNetworkInfo()?.run {
+                    if (type == ConnectivityManager.TYPE_MOBILE
+                        || type == ConnectivityManager.TYPE_WIFI
+                        || type == ConnectivityManager.TYPE_VPN
+                    ) {
+                        available = true
+                    }
+                }
+            }
+        }
+        return available
     }
 }

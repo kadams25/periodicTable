@@ -1,5 +1,6 @@
 package com.example.periodictable
 
+import android.graphics.Bitmap
 import java.io.Serializable
 
 class Element(
@@ -18,5 +19,5 @@ class Element(
     var atomicRadius: String = "",
     var meltingPoint: String = "",
     var boilingPoint: String = "",
-    var density: String = "",
+    var density: String = ""
 ) :Serializable
