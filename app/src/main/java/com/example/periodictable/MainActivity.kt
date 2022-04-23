@@ -92,18 +92,27 @@ class MainActivity : AppCompatActivity() {
             dialog.setOnShowListener {
 
                 val okButton = dialog.getButton(AlertDialog.BUTTON_POSITIVE)
-                okButton.isEnabled = false
 
-                input.addTextChangedListener(object: TextWatcher {
-                    override fun onTextChanged(s:CharSequence, start:Int, before:Int, count:Int) {
-                        okButton.isEnabled = s.toString().trim{ it <= ' ' }.isNotEmpty()
-                    }
-                    override fun beforeTextChanged(s:CharSequence, start:Int, count:Int,
-                                                   after:Int) {
-                    }
-                    override fun afterTextChanged(s: Editable) {
-                    }
-                })
+                with(input) {
+                    okButton.isEnabled = false
+
+                    addTextChangedListener(object : TextWatcher {
+                        override fun onTextChanged(
+                            s: CharSequence, start: Int, before: Int, count: Int
+                        ) {
+                            okButton.isEnabled = s.toString().trim { it <= ' ' }.isNotEmpty()
+                        }
+
+                        override fun beforeTextChanged(
+                            s: CharSequence, start: Int, count: Int,
+                            after: Int
+                        ) {
+                        }
+
+                        override fun afterTextChanged(s: Editable) {
+                        }
+                    })
+                }
 
                 okButton.setOnClickListener {
                     elementName = input.getText().toString().uppercase()
