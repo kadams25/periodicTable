@@ -3,11 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Kyle A/AndroidStudioProjects/periodicTable/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.261" />
         <entry key="..\:/Users/Kyle A/AndroidStudioProjects/periodicTable/app/src/main/res/drawable/ic_broken_image.xml" value="0.472" />
         <entry key="..\:/Users/Kyle A/AndroidStudioProjects/periodicTable/app/src/main/res/drawable/ic_search.xml" value="0.472" />
         <entry key="..\:/Users/Kyle A/AndroidStudioProjects/periodicTable/app/src/main/res/layout/activity_acknowledgment.xml" value="0.41025641025641024" />
         <entry key="..\:/Users/Kyle A/AndroidStudioProjects/periodicTable/app/src/main/res/layout/activity_element_object.xml" value="0.5177083333333333" />
-        <entry key="..\:/Users/Kyle A/AndroidStudioProjects/periodicTable/app/src/main/res/layout/activity_main.xml" value="0.5177083333333333" />
+        <entry key="..\:/Users/Kyle A/AndroidStudioProjects/periodicTable/app/src/main/res/layout/activity_main.xml" value="0.21474926253687315" />
         <entry key="..\:/Users/Kyle A/AndroidStudioProjects/periodicTable/app/src/main/res/layout/attribution_acknowledgment.xml" value="0.4247863247863248" />
         <entry key="..\:/Users/Kyle A/AndroidStudioProjects/periodicTable/app/src/main/res/menu/element_object_menu.xml" value="0.337037037037037" />
         <entry key="..\:/Users/Kyle A/AndroidStudioProjects/periodicTable/app/src/main/res/menu/main_menu.xml" value="0.5177083333333333" />
