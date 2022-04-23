@@ -25,7 +25,6 @@
         <TableLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:splitMotionEvents="false"
             android:layout_marginBottom="64dp">
 
             <TableRow
