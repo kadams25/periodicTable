@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">periodicTable</string>
+    <string name="app_name">Periodic Table</string>
     <string name="intent_data_key">dataKey</string>
 
     <string name="atomicNum">Atomic number: %s</string>

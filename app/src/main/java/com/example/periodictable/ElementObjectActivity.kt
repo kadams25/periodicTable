@@ -137,7 +137,6 @@ class ElementObjectActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
         if (item.itemId == R.id.menu_acknknowledgment) {
             val intent = Intent(this, AcknowledgmentActivity::class.java)
             intent.putExtra(getString(R.string.intent_data_key), elementInfo)
